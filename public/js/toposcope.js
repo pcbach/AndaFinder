@@ -107,8 +107,13 @@ function drawNeedles(context, radius)
             radius/2, 3.141592654, 
             distinquishableColour(i+1) 
         );
-        distance = Number(distance.toFixed(3));
-        drawLetter(context, radius/2, deviceAngle+bearingAngle, locationsOfInterest[i].label+": "+((distance > 1) ? distance : distance*1000) + 
+        if(distances<1){
+            distance = Number(distance.toFixed(3));
+        }
+        else{
+            distance = Number(distance.toFixed(0));
+        }
+        drawLetter(context, radius/2, deviceAngle+bearingAngle, locationsOfInterest[i].label+":\n "+((distance > 1) ? distance : distance*1000) + 
             ((distance > 1) ? "km" : "m")
             );
     }
