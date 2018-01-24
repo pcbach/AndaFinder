@@ -50,14 +50,12 @@ app.post('/join', (req, res) => {
 	console.log(req.body.lat);
 	console.log(req.body.lng);
 	console.log(req.body.name);
-	if((typeof req.body.lat === "number") && (typeof req.body.lng === "number")){
-		tracking.push({
-			label: req.body.name,
-			latitude: req.body.lat,
-			longitude: req.body.lng
-		});
-		console.log(tracking);
-	}
+	tracking.push({
+		label: req.body.name,
+		latitude: Number(req.body.lat),
+		longitude: Number(req.body.lng)
+	});
+	console.log(tracking);
 	/*// body-parser's parsed data is available under "req.body".
 	let chosen = Number(req.body.choice);
 	// Increase the girl's score by one. Can you do it?
