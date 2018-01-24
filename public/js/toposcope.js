@@ -125,14 +125,14 @@ function updateLocationDistances()
     for(var i = 0; i < locationsOfInterest.length;i++)
     {
         var distance = (getLocationDistance(
-            currentPosition,locationsOfInterest[i])).toFixed(6);
+            currentPosition,locationsOfInterest[i]));
         listCellContents.push({
             label: locationsOfInterest[i].label,
             labelColour: distinquishableColour(i+1),
             detailLabel: "Distance: " + 
             // The ? notation is a shorter method of implementing a for loop
             // The syntax follows <(condition) ? if true : if false>
-            ((distance > 1000) ? distance/1000 : distance).toFixed(6) + 
+            ((distance > 1000) ? distance/1000 : distance) + 
             ((distance > 1000) ? "km" : "m"),
         });
     }
