@@ -3,6 +3,7 @@ function success(pos)
     {
         // Store pos.coords into variable 'crd' for efficiency
         var crd = pos.coords;
+        document.getElementsByName("submit")[0].disabled = false;
         document.getElementsByName("lat")[0].value = pos.coords.latitude;
         document.getElementsByName("lng")[0].value = pos.coords.longitude;
     };

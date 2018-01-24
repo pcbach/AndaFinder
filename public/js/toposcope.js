@@ -107,9 +107,10 @@ function drawNeedles(context, radius)
             radius/2, 3.141592654, 
             distinquishableColour(i+1) 
         );
-        drawLetter(context, radius/2, deviceAngle+bearingAngle, locationsOfInterest[i].label+": "+((distance > 1000) ? distance/1000 : distance) + 
-            ((distance > 1000) ? "km" : "m")
-        );
+        distance = Number(distance.toFixed(3));
+        drawLetter(context, radius/2, deviceAngle+bearingAngle, locationsOfInterest[i].label+": "+((distance > 1) ? distance : distance*1000) + 
+            ((distance > 1) ? "km" : "m")
+            );
     }
 }
 //
