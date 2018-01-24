@@ -4,7 +4,7 @@
   "description": "A finder app",
   "main": "index.js",
   "author": "Anda",
-  "scripts": {  "start": "node lib/index.js" },
+  "scripts": {  "start": "node index.js" },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
