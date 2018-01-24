@@ -1,0 +1,21 @@
+<!-- This file serves as the template for the home page. -->
+<head>
+	<title>Finder</title>
+</head>
+<body>
+	<div style="text-align: center"> <!-- Set the text align within the element to center -->
+		<h2>Finder</h2>
+		<!-- We create a form that, when submitted, sends a POST request to /choose with
+		the preferred choice -->
+		<form action="/join" method="POST" name="coordinates">
+			<input type="text" name="name" required/>
+			<br> <!-- br is a line-break -->
+			<input type="text" name="lat" readonly/>
+			<br>
+			<input type="text" name="lng" readonly/>
+			<br>
+			<input type="submit" value="submit!"/> <!-- A submit button -->
+		</form>
+	</div>
+    <script src="js/gps.js"></script>
+</body>
