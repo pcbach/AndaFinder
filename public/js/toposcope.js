@@ -107,7 +107,7 @@ function drawNeedles(context, radius)
             radius/2, 3.141592654, 
             distinquishableColour(i+1) 
         );
-        if(distances<1){
+        if(distance<1){
             distance = Number(distance.toFixed(3));
         }
         else{
