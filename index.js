@@ -67,6 +67,6 @@ app.post('/join', (req, res) => {
 	res.redirect("/main");
 });
 
-app.listen(process.env.PORT || 3000, () => {
-	console.log("Finder loaded!");
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Finder loaded!");
 });
