@@ -104,10 +104,12 @@ function drawNeedles(context, radius)
         // We place it in a for loop to draw all of the needles
         drawNeedle(
             context, deviceAngle+bearingAngle , 0, 
-            radius*distance/maxDistance*0.99, 3.141592654, 
+            radius/2, 3.141592654, 
             distinquishableColour(i+1) 
         );
-        drawLetter(context, radius*distance/maxDistance*0.99, deviceAngle+bearingAngle, locationsOfInterest[i].label );
+        drawLetter(context, radius/2, deviceAngle+bearingAngle, locationsOfInterest[i].label+": "+((distance > 1000) ? distance/1000 : distance) + 
+            ((distance > 1000) ? "km" : "m")
+        );
     }
 }
 //

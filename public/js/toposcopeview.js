@@ -232,7 +232,7 @@ function drawLetter(context, radius, degAng, letter)
 
     // Text style.
     context.fillStyle = "black";
-    context.font = 12 + "px arial";
+    context.font = radius*0.2 + "px arial";
     context.textBaseline = "middle";
     context.textAlign = "center";
 
