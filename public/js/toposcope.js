@@ -107,6 +107,7 @@ function drawNeedles(context, radius)
             radius*distance/maxDistance*0.99, 3.141592654, 
             distinquishableColour(i+1) 
         );
+        drawLetter(context, radius*distance/maxDistance*0.99, deviceAngle+bearingAngle, locationsOfInterest[i].label );
     }
 }
 //
