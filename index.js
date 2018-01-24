@@ -50,11 +50,13 @@ app.post('/join', (req, res) => {
 	console.log(req.body.lat);
 	console.log(req.body.lng);
 	console.log(req.body.name);
-	tracking.push({
-		label: req.body.name,
-		latitude: Number(req.body.lat),
-		longitude: Number(req.body.lng)
-	});
+	if(!(Number(req.body.lat)===0 && Number(req.body.lng)===0)){
+		tracking.push({
+			label: req.body.name,
+			latitude: Number(req.body.lat),
+			longitude: Number(req.body.lng)
+		});
+	}
 	console.log(tracking);
 	/*// body-parser's parsed data is available under "req.body".
 	let chosen = Number(req.body.choice);
